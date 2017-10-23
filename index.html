@@ -13,53 +13,62 @@
         <div class="jumbotron">Trivia Game</div>
         <div class="row">
             <div id="col-sm-12">
-                <h2 id="thirty-seconds"> </h2>
+                <h2 id="thirty-seconds">Click "Start" button to begin.</h2>
                 <h3>First Question</h3>
                 <p>This is the first question?</p>
-                <form id="submit-btn" >
+                <form id="quiz-form" onsubmit="return checkAnswers()">
                     <div class="radio">
                         <label>
-                            <input type="radio" name="radio-btn-group">Option 1</label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="radio-btn-group">Option 2</label>
-                    </div>
-                    <div class="radio disabled">
-                        <label>
-                            <input type="radio" name="radio-btn-group" value="correct">Option 3</label>
-                    </div>
-                    <h3>Second Question</h3>
-                    <p>This is the second question?</p>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="radio-btn-group">Option 1</label>
+                            <input type="radio" name="radio-question-1" value="A" id="q1a">Option A</label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="radio-btn-group">Option 2</label>
-                    </div>
-                    <div class="radio disabled">
-                        <label>
-                            <input type="radio" name="radio-btn-group" disabled>Option 3</label>
-                    </div>
-                    <h3>Third Question</h3>
-                    <p>This is the third question?</p>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="radio-btn-group">Option 1</label>
+                            <input type="radio" name="radio-question-1" value="B" id="q1b">Option B</label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="radio-btn-group" value="correct">Question 1 Correct</label>
+                            <input type="radio" name="radio-question-1" value="C" id="q1c">Option C</label>
                     </div>
-                    <div class="radio disabled">
-                        <label>
-                            <input type="radio" name="radio-btn-group" disabled>Option 3</label>
-                    </div>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="startTimer()">Start Game</button>
 
-                    <button type="button" class="btn btn-default btn-lg" onClick="checkAnswers()" id="btn-check-answers" disabled="true">Submit</button>
+                    <!-- Second Question -->
+                    <h3>Second Question</h3>
+                <p>This is the first question?</p>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="radio-question-2" value="A" id="q2a">Option A</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="radio-question-2" value="B" id="q2b">Option B</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="radio-question-2" value="C" id="q2c">Option C</label>
+                    </div>
+
+                    <!-- Third Question -->
+
+                    <h3>Third Question</h3>
+                <p>This is the first question?</p>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="radio-question-3" value="A" id="q3a">Option A</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="radio-question-3" value="B" id="q3b">Option B</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="radio-question-3" value="C" id="q3c">Option C</label>
+                    </div>
+                    
+                    <!-- Turn on after testing Game Logic
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="startTimer()">Start Game</button>
+            		-->
+
+                    <button type="submit" class="btn btn-default btn-lg" id="btn-check-answers">Submit</button>
                 </form>
             </div>
         </div>

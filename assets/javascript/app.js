@@ -1,7 +1,9 @@
+/*
+
 // Variables
 
 	// 30 second countdown timer
-    var thirtySeconds = 5;
+    var thirtySeconds = 10;
 
     // Variable to hold count of correct or incorrect answers
     var correctAnswer = "";
@@ -63,29 +65,46 @@
 		// alert("Check Answers Clicked");
 
 		var val = checkAnswers(document.getElementById("submit-btn"), "radio-btn-group" );
-		alert(val);
+		console.log(val);
 		
 		// Get values from checkboxes and put into variable
 		
 	};
 
+	*/
 
+// Game Logic
 
-/*
+var totalQuestions = 3;
+var quizScore = 0;
 
-function getRadioVal(form, name) {
-    var val;
-    // get list of radio buttons with specified name
-    var radios = form.elements[name];
-    
-    // loop through list of radio buttons
-    for (var i=0, len=radios.length; i<len; i++) {
-        if ( radios[i].checked ) { // radio checked?
-            val = radios[i].value; // if so, hold its value in val
-            break; // and break out of for loop
+function checkAnswers() {
+    var q1 = document.forms["quiz-form"]["radio-question-1"].value;
+    var q2 = document.forms["quiz-form"]["radio-question-2"].value;
+    var q3 = document.forms["quiz-form"]["radio-question-3"].value;
+
+    // Validation
+    for (i = 1; i <= totalQuestions; i++) {
+        if (eval("q" + i) == null || eval("q" + i) == "") {
+            alert("You missed question " + i);
+            return false;
         }
     }
-    return val; // return value of checked radio or undefined if none checked
-}
 
-*/
+    // The answers!
+    var correctAnswers = ["B", "A", "C"];
+
+    // Check answers
+    
+    /*for (i = 1; i <= totalQuestions; i++) {
+        if (eval("q" + i) == correctAnswers[i-1]) {
+            score++;
+        }*/
+
+        for (j = 0; correctAnswers.length; j++){
+        	console.log(correctAnswers[j]);
+        }
+
+    alert("You scored "+score+" out of "+totalQuestions);
+    return false;
+}
